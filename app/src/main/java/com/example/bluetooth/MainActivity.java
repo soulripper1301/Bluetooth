@@ -23,7 +23,7 @@ import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
     static final UUID dUUID=UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-    String device="";//ardunio device address like  : 00:21:13:02:B6:5B
+    String device="00:22:04:00:28:D0";//ardunio device address like  : 00:21:13:02:B6:5B
     Button btn_1;
 
     @Override
@@ -31,11 +31,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         hook();
-        //process();  comment out for automation
+//        process(); //  comment out for automation
         btn_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                process();
+  //         process();//comment out to enable manual connection
+                startActivity(new Intent(MainActivity.this,MainActivity2.class)); //comment out for going directly to go to 2nd page
             }
         });
     }

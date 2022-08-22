@@ -10,6 +10,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        //-X
+        maven { url 'https://jitpack.io' }
+        //-X
     }
 }
 rootProject.name = "Bluetooth"
